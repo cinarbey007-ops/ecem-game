@@ -16,10 +16,10 @@ const ROOM_TEMPLATES = {
       [1,0,0,0,0,0,0,0,0,1],
       [1,0,0,0,4,0,0,0,0,1],
       [1,0,0,0,0,0,0,0,0,1],
-      [1,1,1,1,2,2,1,1,1,1],
+      [1,2,2,2,1,1,1,1,1,1],
     ],
     spawnPoints: [{x:2,y:2},{x:7,y:2}],
-    exits: [{ side:'south', tx:4, ty:7 }]
+    exits: [{ side:'south', tx:1, ty:7 }]
   },
 
   // --- ARENA SMALL (one wave) ---
