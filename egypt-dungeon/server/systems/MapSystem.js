@@ -46,13 +46,13 @@ class MapSystem {
     this.worldHeight = currentY * C.TILE_SIZE;
     this.worldWidth = (Math.max(...this.rooms.map(r => r.w)) + 8) * C.TILE_SIZE;
 
-    // Build solid grid
+    // Build solid grid (default passable, walls override)
     const totalRows = currentY;
     const totalCols = Math.ceil(this.worldWidth / C.TILE_SIZE);
     for (let r = 0; r < totalRows; r++) {
       this.solidGrid[r] = [];
       for (let c = 0; c < totalCols; c++) {
-        this.solidGrid[r][c] = true; // default solid
+        this.solidGrid[r][c] = false; // default passable (only walls block)
       }
     }
 
@@ -238,3 +238,4 @@ class MapSystem {
 }
 
 module.exports = MapSystem;
+
